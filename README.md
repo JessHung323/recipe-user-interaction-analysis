@@ -65,8 +65,20 @@ We can see that the `rating_original` is left-skewed and there is no value at 0.
 
 ### Bivariate Analysis 
 #### Plot 1 - Scatterplot with `minutes` and `n_steps`
+Before plotting the relationship between `minutes` and `n_steps`, we have decided to first group the dataframe by `recipe_id`. This is because one recipe may have multiple users, hence representing just one recipe would be enough.
 
+This scatterplot shows the relationship between `minutes` and `n_steps`.
 
+<iframe src="assets/scatter-minutes-nsteps.html" width=800 height=600 frameBorder=0></iframe>
+
+Intuitively, one may think that the longer the time a recipe takes, the more steps are involved. However, the linear regression line shows that the relationship is very weak. This is due to the extreme outliers on the right, while the values of `n_steps` are relatively reasonable in comparison.
+
+#### Plot 2 - Scatterplot with `minutes` and `rating`
+Using the same grouped dataframe as above, this scatterplot shows the relationship between `minutes` and `rating_average`:
+
+<iframe src="assets/scatter-minutes-nsteps.html" width=800 height=600 frameBorder=0></iframe>
+
+We observe a very weak relationship between these two variables. We believe this is due to the extreme outliers in `minutes`, while `rating_average` is capped at 5.
 
 
 ## Assessment of Missingness
