@@ -7,7 +7,7 @@ When people search for recipes online and skims through the pages for each one, 
 
 Our project tries to analyze the relationship between the time (in minutes) a recipe takes and its corresponding rating and answer the question:
 
-<p salign="center">What is the relationship between the cooking time and average rating of recipes?</p>
+***What is the relationship between the cooking time and average rating of recipes?***
 
 Perhaps a longer recipe will receive lower rating because as one completes the recipe that takes a super long time, and realized the outcome is not as "wow" as expected, then the user may be more likely to leave a low rating. Intuitively, this makes sense. 
 
