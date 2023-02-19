@@ -9,7 +9,7 @@ Our project tries to analyze the relationship between the time (in minutes) a re
 
 ***What is the relationship between the cooking time and average rating of recipes?***
 
-Perhaps a longer recipe will receive lower rating because as one completes the recipe that takes a super long time, and realized the outcome is not as "wow" as expected, then the user may be more likely to leave a low rating. Intuitively, this makes sense. 
+Perhaps a longer recipe will receive lower rating because as one completes the recipe that takes a super long time, and realized the outcome is not as "wow" as expected, then the user may be more likely to leave a low rating. While at the same time, a recipe that takes less time may be less sophisticated in developing flavors and presentation, hence the rating for these recipes may be lower. Which one is more intuitive for you?
 
 
 ## Cleaning and EDA
