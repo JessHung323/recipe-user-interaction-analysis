@@ -13,6 +13,7 @@ Perhaps a longer recipe will receive lower rating because as one completes the r
 
 
 ## Cleaning and EDA
+### Data Cleaning
 
 
 ## Assessment of Missingness
