@@ -23,7 +23,7 @@ In the data cleaning process, we:
 
 
 
-<iframe src="/assets/count-minutes-without-outliers.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/count-minutes-without-outliers.html" width=800 height=600 frameBorder=0></iframe>
 
 
 ## Assessment of Missingness
