@@ -19,7 +19,7 @@ In the data cleaning process, we:
 2. Replaced all rating `0` with `np.NaN` as a `0` rating essentially means the user did not leave a rating for the recipe they used.
 3. Calculated the average rating for each recipe and assigned this new series as a new column of the dataframe.
 4. Splitted the `nutrition` column into 7 new columns: 
-		`'calories', 'total fat', 'sugar', 'sodium', 'protein', 'saturated fat', 'carbohydrate'`, each in the type `float`.
+		`'calories'`, `'total fat'`, `'sugar'`, '`sodium'`, `'protein'`, `'saturated fat'`, `'carbohydrate'`, each in the type `float`.
 
 
 
