@@ -22,10 +22,28 @@ In the data cleaning process, we:
 		`'calories'`, `'total fat'`, `'sugar'`, '`sodium'`, `'protein'`, `'saturated fat'`, `'carbohydrate'`, each in the type `float`.
 
 
+### Univariate Analysis Plot 1 - Distribution of `minutes`
+For this plot, we intend to plot the distribution of the `minutes` column in the dataframe. As we performed the plotting directly, this is the resulting plot: 
+
+<iframe src="assets/count-minutes-with-extremes.html" width=800 height=600 frameBorder=0></iframe>
+
+As one can see, the distribution is extremely skewed to the right because of extreme outliers.
+
+Due to the lack of clarity of this plot, we decided to remove the top 5 outliers using the threshold of 100000 minutes. This is the resulting plot:
+
+<iframe src="assets/count-minutes-without-extremes.html" width=800 height=600 frameBorder=0></iframe>
+
+This newly generated plot is still very right-skewed, hence we decided to use the interquartile quartertile range (IQR) of the data to determine the outliers defined as follows:
+
+Recipes with 
+1. `minutes` < 25th quartile - 1.5 * IQR or 
+2. `minutes` > 75th quartile + 1.5 * IQR
+
+The final distribution of `minutes` we have is:
 
 <iframe src="assets/count-minutes-without-outliers.html" width=800 height=600 frameBorder=0></iframe>
 
-
+This final plot is the clearest among all three, but we can observe spikes on `minutes` that are ending in 0s and 5s. We believe this is the result of recipe contributors' habits and convention of rounding their recipes' time to the nearest 10s or 5s. 
 ## Assessment of Missingness
 
 
