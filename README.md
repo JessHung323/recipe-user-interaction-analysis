@@ -1,7 +1,8 @@
 # Recipe User-Interaction Analysis
 ### By: Jessica Hung, Samantha Lin
 
-## Table of Contents
+
+### Table of Contents
 {: .no_toc .text-delta }
 
 1. TOC
@@ -51,6 +52,16 @@ The final distribution of `minutes` we have is:
 <iframe src="assets/count-minutes-without-outliers.html" width=800 height=600 frameBorder=0></iframe>
 
 This final plot is the clearest among all three, but we can observe spikes on `minutes` that are ending in 0s and 5s. We believe this is the result of recipe contributors' habits and convention of rounding their recipes' time to the nearest 10s or 5s. 
+
+
+### Univariate Analysis Plot 1 - Distribution of `rating_original`
+We decided to plot the distirbution of `rating_original` in the dataframe.
+
+<iframe src="assets/rating-distribution.html" width=800 height=600 frameBorder=0></iframe>
+
+We can see that the `rating_original` is left-skewed and there is no value at 0. This is because we have replaced all `0` ratings at the data cleaning process.
+
+
 ## Assessment of Missingness
 
 
