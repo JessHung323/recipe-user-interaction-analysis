@@ -21,8 +21,7 @@ In the data cleaning process, we:
 4. Splitted the `nutrition` column into 7 new columns: 
 		`'calories', 'total fat', 'sugar', 'sodium', 'protein', 'saturated fat', 'carbohydrate'`, each in the type `float`.
 
-`print(counts[['Quarter', 'Count']].head().to_markdown(index=False))`
-
+<iframe src="assets/count-minutes-without-outliers.html" width=800 height=600 frameBorder=0></iframe>
 
 
 ## Assessment of Missingness
