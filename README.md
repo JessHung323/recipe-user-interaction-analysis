@@ -30,7 +30,8 @@ In the data cleaning process, we:
 		`'calories'`, `'total fat'`, `'sugar'`, '`sodium'`, `'protein'`, `'saturated fat'`, `'carbohydrate'`, each in the type `float`.
 
 
-### Univariate Analysis Plot 1 - Distribution of `minutes`
+### Univariate Analysis 
+#### Plot 1 - Distribution of `minutes`
 For this plot, we intend to plot the distribution of the `minutes` column in the dataframe. As we performed the plotting directly, this is the resulting plot: 
 
 <iframe src="assets/count-minutes-with-extremes.html" width=800 height=600 frameBorder=0></iframe>
@@ -54,12 +55,18 @@ The final distribution of `minutes` we have is:
 This final plot is the clearest among all three, but we can observe spikes on `minutes` that are ending in 0s and 5s. We believe this is the result of recipe contributors' habits and convention of rounding their recipes' time to the nearest 10s or 5s. 
 
 
-### Univariate Analysis Plot 1 - Distribution of `rating_original`
+#### Plot 2 - Distribution of `rating_original`
 We decided to plot the distirbution of `rating_original` in the dataframe.
 
 <iframe src="assets/rating-distribution.html" width=800 height=600 frameBorder=0></iframe>
 
 We can see that the `rating_original` is left-skewed and there is no value at 0. This is because we have replaced all `0` ratings at the data cleaning process.
+
+
+### Bivariate Analysis 
+#### Plot 1 - Scatterplot with `minutes` and `n_steps`
+
+
 
 
 ## Assessment of Missingness
