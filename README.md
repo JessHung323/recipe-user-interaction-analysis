@@ -14,6 +14,11 @@ Perhaps a longer recipe will receive lower rating because as one completes the r
 
 ## Cleaning and EDA
 ### Data Cleaning
+In the data cleaning process, we:
+	1. Left merged the [`RAW_recipes.csv`] with [`RAW_interactions.csv`] to generate a new dataframe that contains recipes and reviews from [`RAW_interactions.csv`] that only have a match id in the [`RAW_recipes.csv`]
+	2. Second item
+	3. Third item
+
 
 
 ## Assessment of Missingness
