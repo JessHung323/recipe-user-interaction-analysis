@@ -11,13 +11,13 @@
 
 Who doesn't love cooking? 😆
 
-When people search for recipes online and skims through the pages for each one, it is natural for one to pay extra attention on the amount of time needed to complete the dish and how well this recipe has been rated by previous users. 
+When people search for recipes online and skim through the webpage for each one, it is natural for one to pay extra attention on the amount of time needed to complete the dish and how well this recipe has been rated by previous users because afterall, you want to make something that tastes good and is not a waste of your time. 
 
-Our project tries to analyze the relationship between the time (in minutes) a recipe takes and its corresponding rating and answer the question:
+Our project tries to analyze the relationship between the time (in minutes) a recipe takes and its corresponding rating, and answer the question:
 
 ***What is the relationship between the cooking time and average rating of recipes?***
 
-Perhaps a longer recipe will receive lower rating because as one completes the recipe that takes a super long time, and realized the outcome is not as "wow" as expected, then the user may be more likely to leave a low rating. While at the same time, a recipe that takes less time may be less sophisticated in developing flavors and presentation, hence the rating for these recipes may be lower. Which one is more intuitive for you?
+Perhaps a longer recipe will receive lower rating because as one completes the recipe that takes a super long time, and realizes the outcome is not as "wow" as expected, then the user may be more likely to leave a low rating. While at the same time, a recipe that takes less time may be less sophisticated in developing flavors and presentation, hence the rating for these recipes may also be lower. Which one is more intuitive for you?
 
 
 ## Cleaning and EDA
@@ -73,13 +73,26 @@ We observe a very weak relationship between these two variables. We believe this
 
 ## Assessment of Missingness
 
-We believe that the `review` column in the interactions dataframe is NMAR because we think that people might not want to write a review because it'll take extra time, so they might be not willing to take time to write that. That being said. we think that if that was the case, the chance of missingness in the review column would depend on the values themselves. If we want to prove that it is MAR we would need to compare the missingness of reviews to their rating and if we can see that the rating has an affect on the reviews, then we can conclude that the reviews are MAR, but it the permutation test can't prove it, then we would conclude that the missingness of in the reviews column is NMAR.
+### **NMAR Analysis**
+We believe that the `review` column in the interactions dataframe can be NMAR because perhaps the user never really completed the recipe they started on, hence the review would be missing in this case. That being said, if we are able to obtain an additional column indicating whether the user truly finished the recipe, we may be able to determine that the missingness of `review` is MAR for the reason stated above.
+
+### **Missingness Dependency**
+#### **Plot 1 - Missingness of `minutes` on `rating_original`**
+<iframe src="assets/missing-minute-orig-rating.html" width=800 height=600 frameBorder=0></iframe>
+
+We fail to reject the null, hence we conclude that the missingness in the `minutes` column is not dependent on the `rating_original`.
+
+#### **Plot 2 - Missingness of `minutes` on `n_steps`**
+<iframe src="assets/missing-minute-name.html" width=800 height=600 frameBorder=0></iframe>
+
+In this case, we reject the null, hence we conclude that the missingness in the `minutes` column is dependent on the`n_steps` column. We can further conclude that there is a relationship between minute and number of steps it takes for a recipe to be completed.
+
 
 ## Permutation Testing
 
-*Null Hypothesis*: In the population, the average rating of recipes with `minutes` under the median `minutes` of the dataset has the same average rating of recipes with `minutes` above the median `minutes` -- the ratings of the two samples come from the same population.
+*Null Hypothesis*: In the population, the average rating of recipes with `minutes` under the median `minutes` of the dataset has the same average rating of recipes with `minutes` above the median `minutes` -- the ratings of the two samples come from the same population distribution.
 
-*Alternative Hypothesis*: In the population, the average rating of recipes with `minutes` under the median `minutes` of the dataset is higher than the average rating of recipes with `minutes` above the median `minutes` of the dataset.
+*Alternative Hypothesis*: In the population, the average rating of recipes with `minutes` under the median `minutes` of the dataset is higher than the average rating of recipes with `minutes` above the median `minutes`.
 
 *Test Statistic*: The difference in means of the average ratings of the two samples of the dataset.
 
@@ -89,6 +102,6 @@ We believe that the `review` column in the interactions dataframe is NMAR becaus
 
 *Conclusion*: We reject the null hypothesis that the two samples are from the same distribution.
 
-We believe, intuitively, that the average ratings of recipes that require fewer minutes will receive higher rating. However, we need to select a threshold to determine how to separate the two samples. Median is the more natural choice because it is more robust against outliers. Using the media, we are able to separate the samples and retrieve the mean of of average ratings of each sample. Since we are trying to prove that average rating of the first sample (sampl with lower minutes) is higher than the second, we use difference in mean, instead of absolute difference in mean.
+We believe, intuitively, that the average ratings of recipes that require fewer minutes will receive higher rating. However, we need to select a threshold to determine how to separate the two samples. Median is the more natural choice because it is more robust against outliers (as we have shown in previous sections, there exists some extreme outliers in the dataset). Using the median, we are able to separate the samples and retrieve the mean of of average ratings of each sample. Since we are trying to prove that average rating of the first sample (sample with lower minutes) is higher than the second, we use signed difference in mean, instead of absolute difference in mean.
 
 
