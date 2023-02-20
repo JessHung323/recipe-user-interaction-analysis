@@ -1,5 +1,6 @@
+# Recipe User-Interaction Analysis
 
-### By: Jessica Hung, Samantha Lin
+#### By: Jessica Hung, Samantha Lin
 
 
 ### Table of Contents
