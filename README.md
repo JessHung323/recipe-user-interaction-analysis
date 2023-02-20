@@ -35,66 +35,7 @@ In the data cleaning process, we:
 4. Splitted the `nutrition` column into 7 new columns: 
 		`'calories'`, `'total fat'`, `'sugar'`, `'sodium'`, `'protein'`, `'saturated fat'`, `'carbohydrate'`, each in the type `float`.
 
-<table border="1" class="dataframe">
-	<thead>
-		<tr style="text-align: right;">
-			<th>name</th>
-			<th>recipe_id</th>
-			<th>minutes</th>
-			<th>rating_original</th>
-			<th>rating_average</th>
-			<th>calories</th>
-			<th>review</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>1 brownies in the world    best ever</td>
-			<td>333281.0</td>
-			<td>40.0</td>
-			<td>4.0</td>
-			<td>4.0</td>
-			<td>138.4</td>
-			<td>These were pretty good, but took forever to bake.  I would send it ended up being almost an hour!  Even then, the brownies stuck to the foil, and were on the overly moist side and not easy to cut.  They did taste quite rich, though!  Made for My 3 Chefs.</td>
-		</tr>
-		<tr>
-			<td>1 in canada chocolate chip cookies</td>
-			<td>453467.0</td>
-			<td>45.0</td>
-			<td>5.0</td>
-			<td>5.0</td>
-			<td>595.1</td>
-			<td>Originally I was gonna cut the recipe in half (just the 2 of us here), but then we had a park-wide yard sale, &amp; I made the whole batch &amp; used them as enticements for potential buyers ~ what the hey, a free cookie as delicious as these are, definitely works its magic! Will be making these again, for sure! Thanks for posting the recipe!</td>
-			</tr>
-			<tr>
-				<td>412 broccoli casserole</td>
-				<td>306168.0</td>
-				<td>40.0</td>
-				<td>5.0</td>
-				<td>5.0</td>
-				<td>194.8</td>
-				<td>This was one of the best broccoli casseroles that I have ever made.  I made my own chicken soup for this recipe. I was a bit worried about the tsp of soy sauce but it gave the casserole the best flavor. YUM!  \\nThe photos you took (shapeweaver) inspired me to make this recipe and it actually does look just like them when it comes out of the oven.  \\nThanks so much for sharing your recipe shapeweaver. It was wonderful!  Going into my family\'s favorite Zaar cookbook :)</td>
-			</tr>
-			<tr>
-				<td>412 broccoli casserole</td>
-				<td>306168.0</td>
-				<td>40.0</td>
-				<td>5.0</td>
-				<td>5.0</td>
-				<td>194.8</td>
-				<td>I made this for my son\'s first birthday party this weekend. Our guests INHALED it! Everyone kept saying how delicious it was. I was I could have gotten to try it.</td>
-			</tr>
-			<tr>
-				<td>412 broccoli casserole</td>
-				<td>306168.0</td>
-				<td>40.0</td>
-				<td>5.0</td>
-				<td>5.0</td>
-				<td>194.8</td>
-				<td>Loved this.  Be sure to completely thaw the broccoli.  I didn&amp;#039;t and it didn&amp;#039;t get done in time specified.  Just cooked it a little longer though and it was perfect.  Thanks Chef.</td>
-			</tr>
-		</tbody>
-	</table>
+<table border="1" class="dataframe">\n  <thead>\n    <tr style="text-align: right;">\n      <th>name</th>\n      <th>recipe_id</th>\n      <th>minutes</th>\n      <th>n_steps</th>\n      <th>rating_average</th>\n      <th>calories</th>\n      <th>review</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>1 brownies in the world    best ever</td>\n      <td>333281.0</td>\n      <td>40</td>\n      <td>10</td>\n      <td>4.0</td>\n      <td>138.4</td>\n      <td>These were pretty good, but took forever to bake.  I would send it ended up being almost an hour!  Even then, the brownies stuck to the foil, and were on the overly moist side and not easy to cut.  They did taste quite rich, though!  Made for My 3 Chefs.</td>\n    </tr>\n    <tr>\n      <td>1 in canada chocolate chip cookies</td>\n      <td>453467.0</td>\n      <td>45</td>\n      <td>12</td>\n      <td>5.0</td>\n      <td>595.1</td>\n      <td>Originally I was gonna cut the recipe in half (just the 2 of us here), but then we had a park-wide yard sale, &amp; I made the whole batch &amp; used them as enticements for potential buyers ~ what the hey, a free cookie as delicious as these are, definitely works its magic! Will be making these again, for sure! Thanks for posting the recipe!</td>\n    </tr>\n    <tr>\n      <td>412 broccoli casserole</td>\n      <td>306168.0</td>\n      <td>40</td>\n      <td>6</td>\n      <td>5.0</td>\n      <td>194.8</td>\n      <td>This was one of the best broccoli casseroles that I have ever made.  I made my own chicken soup for this recipe. I was a bit worried about the tsp of soy sauce but it gave the casserole the best flavor. YUM!  \\nThe photos you took (shapeweaver) inspired me to make this recipe and it actually does look just like them when it comes out of the oven.  \\nThanks so much for sharing your recipe shapeweaver. It was wonderful!  Going into my family\'s favorite Zaar cookbook :)</td>\n    </tr>\n    <tr>\n      <td>412 broccoli casserole</td>\n      <td>306168.0</td>\n      <td>40</td>\n      <td>6</td>\n      <td>5.0</td>\n      <td>194.8</td>\n      <td>I made this for my son\'s first birthday party this weekend. Our guests INHALED it! Everyone kept saying how delicious it was. I was I could have gotten to try it.</td>\n    </tr>\n    <tr>\n      <td>412 broccoli casserole</td>\n      <td>306168.0</td>\n      <td>40</td>\n      <td>6</td>\n      <td>5.0</td>\n      <td>194.8</td>\n      <td>Loved this.  Be sure to completely thaw the broccoli.  I didn&amp;#039;t and it didn&amp;#039;t get done in time specified.  Just cooked it a little longer though and it was perfect.  Thanks Chef.</td>\n    </tr>\n  </tbody>\n</table>
 
 
 ### ***Univariate Analysis***
