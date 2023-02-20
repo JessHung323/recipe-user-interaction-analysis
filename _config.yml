@@ -1,7 +1,4 @@
 theme: minima
-title: Recipe User-Interaction Analysis
-description: >
-  Wondering how the ratings and lengths of recipes are related?
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
