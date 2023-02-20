@@ -27,7 +27,7 @@ Perhaps a longer recipe will receive lower rating because as one completes the r
 
 
 ## **Cleaning and EDA**
-### **Data Cleaning**
+### ***Data Cleaning***
 In the data cleaning process, we:
 1. Left merged the `RAW_recipes.csv` with `RAW_interactions.csv` to generate a new dataframe that contains recipes and reviews from `RAW_interactions.csv` that only have a match id in the `RAW_recipes.csv`.
 2. Replaced all rating `0` with `np.NaN` as a `0` rating essentially means the user did not leave a rating for the recipe they used.
@@ -140,6 +140,42 @@ Using the same grouped dataframe as above, this scatterplot shows the relationsh
 <iframe src="assets/scatter-minutes-rating.html" width=800 height=600 frameBorder=0></iframe>
 
 We observe a very weak relationship between these two variables. We believe this is due to the extreme outliers in `minutes`, while `rating_average` is capped at 5.
+
+
+### ***Interesting Aggregates***
+To identify some interesting aggregates of the dataframe, we decided to focus on the `id` and `submitted` columns. We retrieved a copy of the dataframe with only the two selected columns and added a new column to this copy by changing the `submitted` column to type `datetime64` and only getting the year of each recipe. We then grouped the dataframe by year and aggregated the values by `.count()`.
+
+`new_merged['submitted'] = pd.to_datetime(new_merged['submitted'])
+copy_date = new_merged[['id', 'submitted']].copy()
+copy_date['submitted year'] = copy_date['submitted'].apply(lambda x: x.year)
+copy_date = copy_date.groupby('submitted year')[['submitted']].count()`
+
+The resulting `copy_date` dataframe looks like:
+<table border="1" class="dataframe">
+	<thead>
+		<tr style="text-align: right;">
+			<th>submitted</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>97468</td>
+		</tr>
+		<tr>
+			<td>63015</td>
+		</tr>
+		<tr>
+			<td>29897</td>
+		</tr>
+		<tr>
+			<td>17181</td>
+		</tr>
+		<tr>
+			<td>12700</td>
+		</tr>
+	</tbody>
+</table>
+It looks like there is an overall decreasing trend in recipe submission as fewer and fewer recipes are being submitted over the years.
 
 
 ## **Assessment of Missingness**
