@@ -76,3 +76,15 @@ We observe a very weak relationship between these two variables. We believe this
 We believe that the `review` column in the interactions dataframe is NMAR because we think that people might not want to write a review because it'll take extra time, so they might be not willing to take time to write that. That being said. we think that if that was the case, the chance of missingness in the review column would depend on the values themselves. If we want to prove that it is MAR we would need to compare the missingness of reviews to their rating and if we can see that the rating has an affect on the reviews, then we can conclude that the reviews are MAR, but it the permutation test can't prove it, then we would conclude that the missingness of in the reviews column is NMAR.
 
 ## Hypothesis Testing
+#### Hypotheses
+*Null Hypothesis*: In the population, he average rating of recipes with `minutes` under the median `minutes` of the dataset has the same average rating of recipes with `minutes` above the median `minutes`.
+*Alternative Hypothesis*: In the population, the average rating of recipes with `minutes` under the median `minutes` of the dataset is higher than the average rating of recipes with `minutes` above the median `minutes` of the dataset.
+
+*Test Statistic*: The difference in means of the average ratings of the two samples of the dataset.
+*Significance Level*: 0.05
+*p-value*: 0.0
+*Conclusion*: We reject the null hypothesis that the two samples are from the same distribution.
+
+We believe, intuitively, that the average ratings of recipes that require fewer minutes will receive higher rating. However, we need to select a threshold to determine how to separate the two samples. Median is the more natural choice because it is more robust against outliers. Using the media, we are able to separate the samples and retrieve the mean of of average ratings of each sample. Since we are trying to prove that average rating of the first sample (sampl with lower minutes) is higher than the second, we use difference in mean, instead of absolute difference in mean.
+
+
