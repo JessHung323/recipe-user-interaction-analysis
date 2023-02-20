@@ -1,4 +1,5 @@
-## Welcome to Recipe User-Interaction Analysis
+# Welcome to Recipe User-Interaction Analysis
+## Let's explore more about recipes and their ratings!
 {:.no_toc}
 
 #### By: Jessica Hung, Samantha Lin
