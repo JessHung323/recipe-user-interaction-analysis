@@ -24,7 +24,7 @@ Our project tries to analyze the relationship between the time (in minutes) a re
 ***What is the relationship between the cooking time and average rating of recipes?***
 
 Perhaps a longer recipe will receive lower rating because as one completes the recipe that takes a super long time, and realizes the outcome is not as "wow" as expected, then the user may be more likely to leave a low rating. While at the same time, a recipe that takes less time may be less sophisticated in developing flavors and presentation, hence the rating for these recipes may also be lower. Which one is more intuitive for you?
-
+---
 
 ## **Cleaning and EDA**
 ### ***Data Cleaning***
@@ -201,7 +201,7 @@ The resulting `copy_date` dataframe looks like:
 		</tbody>
 	</table>
 It looks like there is an overall decreasing trend in recipe submission as fewer and fewer recipes are being submitted over the years. 🤔
-
+---
 
 ## **Assessment of Missingness**
 
@@ -218,7 +218,7 @@ We fail to reject the null, hence we conclude that the missingness in the `minut
 <iframe src="assets/missing-minute-name.html" width=800 height=600 frameBorder=0></iframe>
 
 In this case, we reject the null, hence we conclude that the missingness in the `minutes` column is dependent on the`n_steps` column. We can further conclude that there is a relationship between minute and number of steps it takes for a recipe to be completed.
-
+---
 
 ## **Permutation Testing**
 
@@ -235,5 +235,5 @@ In this case, we reject the null, hence we conclude that the missingness in the 
 *Conclusion*: We reject the null hypothesis that the two samples are from the same distribution.
 
 We believe, intuitively, that the average ratings of recipes that require fewer minutes will receive higher rating. However, we need to select a threshold to determine how to separate the two samples. Median is the more natural choice because it is more robust against outliers (as we have shown in previous sections, there exists some extreme outliers in the dataset). Using the median, we are able to separate the samples and retrieve the mean of of average ratings of each sample. Since we are trying to prove that average rating of the first sample (sample with lower minutes) is higher than the second, we use signed difference in mean, instead of absolute difference in mean.
-
+---
 
