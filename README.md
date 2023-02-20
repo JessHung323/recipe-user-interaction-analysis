@@ -67,7 +67,7 @@ Intuitively, one may think that the longer the time a recipe takes, the more ste
 
 #### Plot 2 - Scatterplot with `minutes` and `rating`
 Using the same grouped dataframe as above, this scatterplot shows the relationship between `minutes` and `rating_average`:
-<iframe src="assets/scatter-minutes-nsteps.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/scatter-minutes-rating.html" width=800 height=600 frameBorder=0></iframe>
 We observe a very weak relationship between these two variables. We believe this is due to the extreme outliers in `minutes`, while `rating_average` is capped at 5.
 
 
