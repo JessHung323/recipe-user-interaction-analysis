@@ -145,11 +145,6 @@ We observe a very weak relationship between these two variables. We believe this
 ### ***Interesting Aggregates***
 To identify some interesting aggregates of the dataframe, we decided to focus on the `id` and `submitted` columns. We retrieved a copy of the dataframe with only the two selected columns and added a new column to this copy by changing the `submitted` column to type `datetime64` and only getting the year of each recipe. We then grouped the dataframe by year and aggregated the values by `.count()`.
 
-`new_merged['submitted'] = pd.to_datetime(new_merged['submitted'])
-copy_date = new_merged[['id', 'submitted']].copy()
-copy_date['submitted year'] = copy_date['submitted'].apply(lambda x: x.year)
-copy_date = copy_date.groupby('submitted year')[['submitted']].count()`
-
 The resulting `copy_date` dataframe looks like:
 <table border="1" class="dataframe">
 	<thead>
