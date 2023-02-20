@@ -81,7 +81,7 @@ Using the same grouped dataframe as above, this scatterplot shows the relationsh
 We observe a very weak relationship between these two variables. We believe this is due to the extreme outliers in `minutes`, while `rating_average` is capped at 5.
 
 
-## Assessment of Missingness
+## **Assessment of Missingness**
 
 ### **NMAR Analysis**
 We believe that the `review` column in the interactions dataframe can be NMAR because perhaps the user never really completed the recipe they started on, hence the review would be missing in this case. That being said, if we are able to obtain an additional column indicating whether the user truly finished the recipe, we may be able to determine that the missingness of `review` is MAR for the reason stated above.
