@@ -1,4 +1,4 @@
-# Welcome to Recipe User-Interaction Analysis
+## Welcome to Recipe User-Interaction Analysis
 {:.no_toc}
 
 #### By: Jessica Hung, Samantha Lin
