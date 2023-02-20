@@ -1,3 +1,12 @@
+---
+layout: page
+title: Recipe User-Interaction Analysis
+description: Description of Project 3.
+nav_exclude: True
+---
+
+<script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 # Recipe User-Interaction Analysis
 {:.no_toc}
 
@@ -10,7 +19,7 @@
 
 1. TOC
 {:toc}
-
+---
 
 Who doesn't love cooking? 😆
 
