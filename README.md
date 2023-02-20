@@ -81,8 +81,11 @@ We believe that the `review` column in the interactions dataframe is NMAR becaus
 *Alternative Hypothesis*: In the population, the average rating of recipes with `minutes` under the median `minutes` of the dataset is higher than the average rating of recipes with `minutes` above the median `minutes` of the dataset.
 
 *Test Statistic*: The difference in means of the average ratings of the two samples of the dataset.
+
 *Significance Level*: 0.05
+
 *p-value*: 0.0
+
 *Conclusion*: We reject the null hypothesis that the two samples are from the same distribution.
 
 We believe, intuitively, that the average ratings of recipes that require fewer minutes will receive higher rating. However, we need to select a threshold to determine how to separate the two samples. Median is the more natural choice because it is more robust against outliers. Using the media, we are able to separate the samples and retrieve the mean of of average ratings of each sample. Since we are trying to prove that average rating of the first sample (sampl with lower minutes) is higher than the second, we use difference in mean, instead of absolute difference in mean.
