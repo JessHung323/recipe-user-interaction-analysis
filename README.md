@@ -98,7 +98,7 @@ We fail to reject the null, hence we conclude that the missingness in the `minut
 In this case, we reject the null, hence we conclude that the missingness in the `minutes` column is dependent on the`n_steps` column. We can further conclude that there is a relationship between minute and number of steps it takes for a recipe to be completed.
 
 
-## Permutation Testing
+## **Permutation Testing**
 
 *Null Hypothesis*: In the population, the average rating of recipes with `minutes` under the median `minutes` of the dataset has the same average rating of recipes with `minutes` above the median `minutes` -- the ratings of the two samples come from the same population distribution.
 
