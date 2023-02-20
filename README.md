@@ -1,11 +1,3 @@
----
-layout: page
-title: Recipe User-Interaction Analysis
-description: Description of Project 3.
-nav_exclude: True
----
-
-<script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 # Recipe User-Interaction Analysis
 {:.no_toc}
@@ -13,7 +5,7 @@ nav_exclude: True
 #### By: Jessica Hung, Samantha Lin
 {:.no_toc}
 
-
+---
 ### Table of Contents
 {: .no_toc .text-delta }
 
