@@ -164,11 +164,20 @@ The resulting `copy_date` dataframe looks like:
 			<td>97468</td>
 		</tr>
 		<tr>
-		     <td>17181</td>
+			<td>2009</td>
+			<td>63015</td>
+		 </tr>
+		 <tr>
+		 	<td>2010</td>
+		 	<td>29897</td>
 		 </tr>
 		 <tr>
 		 	<td>2012</td>
 		 	<td>12700</td>
+		 </tr>
+		 <tr>
+		 <td>2011</td>
+		 <td>17181</td>
 		 </tr>
 		 <tr>
 		 	<td>2013</td>
