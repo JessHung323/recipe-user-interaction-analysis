@@ -21,7 +21,7 @@ Perhaps a longer recipe will receive lower rating because as one completes the r
 
 
 ## Cleaning and EDA
-### Data Cleaning
+### **Data Cleaning**
 In the data cleaning process, we:
 1. Left merged the `RAW_recipes.csv` with `RAW_interactions.csv` to generate a new dataframe that contains recipes and reviews from `RAW_interactions.csv` that only have a match id in the `RAW_recipes.csv`.
 2. Replaced all rating `0` with `np.NaN` as a `0` rating essentially means the user did not leave a rating for the recipe they used.
@@ -31,7 +31,7 @@ In the data cleaning process, we:
 
 
 ### ***Univariate Analysis***
-#### Plot 1 - Distribution of `minutes`
+#### **Plot 1 - Distribution of `minutes`**
 For this plot, we intend to plot the distribution of the `minutes` column in the dataframe. As we performed the plotting directly, this is the resulting plot: 
 <iframe src="assets/count-minutes-with-extremes.html" width=800 height=600 frameBorder=0></iframe>
 As one can see, the distribution is extremely skewed to the right because of extreme outliers.
@@ -51,21 +51,21 @@ The final distribution of `minutes` we have is:
 This final plot is the clearest among all three, but we can observe spikes on `minutes` that are ending in 0s and 5s. We believe this is the result of recipe contributors' habits and convention of rounding their recipes' time to the nearest 10s or 5s. 
 
 
-#### Plot 2 - Distribution of `rating_original`
+#### **Plot 2 - Distribution of `rating_original`**
 We decided to plot the distirbution of `rating_original` in the dataframe.
 <iframe src="assets/rating-distribution.html" width=800 height=600 frameBorder=0></iframe>
 We can see that the `rating_original` is left-skewed and there is no value at 0. This is because we have replaced all `0` ratings at the data cleaning process.
 
 
 ### ***Bivariate Analysis***
-#### Plot 1 - Scatterplot with `minutes` and `n_steps`
+#### **Plot 1 - Scatterplot with `minutes` and `n_steps`**
 Before plotting the relationship between `minutes` and `n_steps`, we have decided to first group the dataframe by `recipe_id`. This is because one recipe may have multiple users, hence representing just one recipe would be enough.
 
 This scatterplot shows the relationship between `minutes` and `n_steps`.
 <iframe src="assets/scatter-minutes-nsteps.html" width=800 height=600 frameBorder=0></iframe>
 Intuitively, one may think that the longer the time a recipe takes, the more steps are involved. However, the linear regression line shows that the relationship is very weak. This is due to the extreme outliers on the right, while the values of `n_steps` are relatively reasonable in comparison.
 
-#### Plot 2 - Scatterplot with `minutes` and `rating`
+#### **Plot 2 - Scatterplot with `minutes` and `rating`**
 Using the same grouped dataframe as above, this scatterplot shows the relationship between `minutes` and `rating_average`:
 <iframe src="assets/scatter-minutes-rating.html" width=800 height=600 frameBorder=0></iframe>
 We observe a very weak relationship between these two variables. We believe this is due to the extreme outliers in `minutes`, while `rating_average` is capped at 5.
