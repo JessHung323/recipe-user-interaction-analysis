@@ -78,6 +78,7 @@ We believe that the `review` column in the interactions dataframe is NMAR becaus
 ## Hypothesis Testing
 #### Hypotheses
 *Null Hypothesis*: In the population, he average rating of recipes with `minutes` under the median `minutes` of the dataset has the same average rating of recipes with `minutes` above the median `minutes`.
+
 *Alternative Hypothesis*: In the population, the average rating of recipes with `minutes` under the median `minutes` of the dataset is higher than the average rating of recipes with `minutes` above the median `minutes` of the dataset.
 
 *Test Statistic*: The difference in means of the average ratings of the two samples of the dataset.
