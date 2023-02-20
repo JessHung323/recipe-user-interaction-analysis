@@ -1,6 +1,8 @@
 # Recipe User-Interaction Analysis
+{:.no_toc}
 
 #### By: Jessica Hung, Samantha Lin
+{:.no_toc}
 
 
 ### Table of Contents
