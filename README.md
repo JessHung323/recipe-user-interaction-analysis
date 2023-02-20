@@ -154,28 +154,49 @@ The resulting `copy_date` dataframe looks like:
 <table border="1" class="dataframe">
 	<thead>
 		<tr style="text-align: right;">
+			<th>submitted year</th>
 			<th>submitted</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
+			<td>2008</td>
 			<td>97468</td>
 		</tr>
 		<tr>
-			<td>63015</td>
-		</tr>
-		<tr>
-			<td>29897</td>
-		</tr>
-		<tr>
-			<td>17181</td>
-		</tr>
-		<tr>
-			<td>12700</td>
-		</tr>
-	</tbody>
-</table>
-It looks like there is an overall decreasing trend in recipe submission as fewer and fewer recipes are being submitted over the years.
+		     <td>17181</td>
+		 </tr>
+		 <tr>
+		 	<td>2012</td>
+		 	<td>12700</td>
+		 </tr>
+		 <tr>
+		 	<td>2013</td>
+		 	<td>9870</td>
+		 </tr>
+		 <tr>
+		 	<td>2014</td>
+		 	<td>2534</td>
+		 </tr>
+		 <tr>
+		 	<td>2015</td>
+		 	<td>613</td>
+		 </tr>
+		 <tr>
+		 	<td>2016</td>
+		 	<td>319</td>
+		 </tr>
+		 <tr>
+		 	<td>2017</td>
+		 	<td>521</td>
+		 </tr>
+		 <tr>
+		 	<td>2018</td>
+		 	<td>311</td>
+		 </tr>
+		</tbody>
+	</table>
+It looks like there is an overall decreasing trend in recipe submission as fewer and fewer recipes are being submitted over the years. 🤔
 
 
 ## **Assessment of Missingness**
