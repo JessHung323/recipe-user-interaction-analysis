@@ -1,5 +1,7 @@
 theme: minima
-title: Your awesome title
-author:
-  name: GitHub User
-  email: your-email@domain.com
+title: Recipe User-Interaction Analysis
+description: >
+  Wondering how the ratings and lengths of recipes are related?
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
