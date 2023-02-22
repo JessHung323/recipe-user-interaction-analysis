@@ -224,7 +224,7 @@ In this case, we reject the null, hence we conclude that the missingness in the 
 
 ## **Permutation Testing**
 
-*Null Hypothesis*: In the population, the average rating of recipes with `minutes` under the median `minutes` of the dataset has the same average rating of recipes with `minutes` above the median `minutes` -- the ratings of the two samples come from the same population distribution.
+*Null Hypothesis*: In the population, the average rating of recipes with `minutes` under the median `minutes` of the dataset and average rating of recipes with `minutes` above the median `minutes` come from the same population distribution.
 
 *Alternative Hypothesis*: In the population, the average rating of recipes with `minutes` under the median `minutes` of the dataset is higher than the average rating of recipes with `minutes` above the median `minutes`.
 
@@ -236,6 +236,6 @@ In this case, we reject the null, hence we conclude that the missingness in the 
 
 *Conclusion*: We reject the null hypothesis that the two samples are from the same distribution.
 
-We believe, intuitively, that the average ratings of recipes that require fewer minutes will receive higher rating. However, we need to select a threshold to determine how to separate the two samples. Median is the more natural choice because it is more robust against outliers (as we have shown in previous sections, there exists some extreme outliers in the dataset). Using the median, we are able to separate the samples and retrieve the mean of of average ratings of each sample. Since we are trying to prove that average rating of the first sample (sample with lower minutes) is higher than the second, we use signed difference in mean, instead of absolute difference in mean.
+We believe, intuitively, that the average ratings of recipes that require fewer minutes will receive higher rating. However, we need to select a threshold to determine how to separate the two samples. Median is the more natural choice because it is more robust against outliers (as we have shown in previous sections, there exists some extreme outliers in the dataset). In addition, the size of the dataset also allows us to generalize the sample median to the population. Using the median, we are able to separate the samples and retrieve the mean of of average ratings of each sample. Since we are trying to prove that average rating of the first sample (sample with lower minutes) is higher than the second, we use signed difference in mean, instead of absolute difference in mean.
 
 
