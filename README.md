@@ -29,7 +29,9 @@ Perhaps a longer recipe will receive lower rating because as one completes the r
 ***Number of Rows***: There are two datasets required for this project:
 1. `RAW_recipes.csv` has 83782 rows
 2. `RAW_interactions.csv` has 731927 rows
+
 ***Relevant Columns***: `'minutes'`, `'rating'`, `'n_steps'`, `'id'`, `'review'`, `'recipe_id'`
+
 ***Column Descriptions***: 
 1. `'minutes'`: cooking time, in minutes, the recipe requires; type `int`.
 2. `'rating'`: rating given to the recipe by a user; type `int`.
