@@ -25,7 +25,7 @@ Our project tries to analyze the relationship between the time (in minutes) a re
 
 Perhaps a longer recipe will receive lower rating because as one completes the recipe that takes a super long time, and realizes the outcome is not as "wow" as expected, then the user may be more likely to leave a low rating. While at the same time, a recipe that takes less time may be less sophisticated in developing flavors and presentation, hence the rating for these recipes may also be lower. Which one is more intuitive for you?
 
-### Dataset Brief Overview
+### **Dataset Brief Overview**
 ***Number of Rows***: There are two datasets required for this project:
 1. `RAW_recipes.csv` has 83782 rows
 2. `RAW_interactions.csv` has 731927 rows
